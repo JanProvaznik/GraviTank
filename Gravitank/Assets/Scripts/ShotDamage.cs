@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Constants;
 
 public class ShotDamage : MonoBehaviour
 {
-    const float initialDamage = 1;
-    const float flyCoefficient = 1.5f;
-    const float powerCoefficient = 1;
     float creationTime;
     float damage;
     // Start is called before the first frame update
     void Start()
     {
-        damage = initialDamage;
+        damage = SHOT_BASE_DAMAGE;
         creationTime = Time.time;
 
     }
@@ -20,15 +18,15 @@ public class ShotDamage : MonoBehaviour
     // Update is called once per frame
     void CountInitialPower(float initialPower)
     {
-        damage = damage * initialPower * powerCoefficient;
+        damage = damage * initialPower * SHOT_DAMAGE_POWER_COEFFICIENT;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Debug.Log("collision");
         if (other.tag == "Damageable")
         {
             InAirDamage();
+            Debug.Log(damage);
             other.GetComponent<Health>().TakeDamage(damage);
         }
         //TODO: animace?
@@ -37,7 +35,7 @@ public class ShotDamage : MonoBehaviour
     void InAirDamage()
     {
         float timeInAir = Time.time - creationTime;
-        damage *= timeInAir*flyCoefficient;
+        damage *= timeInAir * SHOT_DAMAGE_TIME_COEFFICIENT;
     }
 
 }
