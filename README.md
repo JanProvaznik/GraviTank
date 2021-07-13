@@ -76,7 +76,7 @@ Pokud letí moc rychle kvůli gravitaci, tak ho zpomalí.
 Vyrábí _Meteory_ v náhodných místech s frekvencí závislou na hracím čase.
 
 
-#### Tlačítkové skripty
+#### GUI skripty
 Triviální.
 
 ## Závěr

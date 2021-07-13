@@ -19,8 +19,12 @@ public class Health : MonoBehaviour
         if (health < 0) EndGame();
         UpdateDisplay();
     }
-    void EndGame() =>
+    void EndGame()
+    {
+        //the other one wins
+        GameInfo.Player1Won = name == "Player2";
         UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+    }
     void UpdateDisplay() =>
         HealthSlider.GetComponent<Slider>().value = health / MAX_HEALTH;
 }

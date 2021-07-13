@@ -18,7 +18,6 @@ public class Meteor : MonoBehaviour
     void Slowdown()
     {
         Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
-        Debug.Log(velocity);
         if (velocity.magnitude > METEOR_MAX_VELOCITY_MAGNITUDE)
             GetComponent<Rigidbody2D>().velocity = METEOR_MAX_VELOCITY_MAGNITUDE * velocity.normalized;
     }
