@@ -1,41 +1,52 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Constants;
+using static GameInfo;
 
 public class ShotDamage : MonoBehaviour
 {
     float creationTime;
     float damage;
-    // Start is called before the first frame update
+    Gradient colorGradient;
     void Start()
     {
-        damage = SHOT_BASE_DAMAGE;
-        creationTime = Time.time;
-
+        StartDamage();
+        StartDisplay();
     }
-
-    // Update is called once per frame
-    void CountInitialPower(float initialPower)
+    void Update()
     {
-        damage = damage * initialPower * SHOT_DAMAGE_POWER_COEFFICIENT;
+        UpdateDamage();
+        UpdateDisplay();
     }
+    // power of shooting matters
+    public void ShotPowerToDamage(float power) =>
+        damage += power * SHOT_DAMAGE_POWER_COEFFICIENT;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Damageable")
         {
-            InAirDamage();
-            Debug.Log(damage);
             other.GetComponent<Health>().TakeDamage(damage);
         }
-        //TODO: animace?
         Destroy(this.gameObject);
     }
-    void InAirDamage()
+    void StartDamage() => damage = SHOT_BASE_DAMAGE;
+    void UpdateDamage()
     {
-        float timeInAir = Time.time - creationTime;
-        damage *= timeInAir * SHOT_DAMAGE_TIME_COEFFICIENT;
+        if (damage < SHOT_MAX_DAMAGE)
+            damage += SHOT_DAMAGE_TIME_COEFFICIENT;
     }
-
+    void StartDisplay()
+    {   
+        colorGradient = new Gradient();
+        GradientColorKey[] colorKey = new GradientColorKey[2];
+        colorKey[0].color = Color.white;
+        colorKey[0].time = 0.0f;
+        colorKey[1].color = new Color(0xFF, 0x80, 0x00); //orange
+        colorKey[1].time = 1.0f;
+        colorGradient.colorKeys = colorKey;
+    }
+    void UpdateDisplay() =>
+       GetComponent<SpriteRenderer>().color = colorGradient.Evaluate(damage / SHOT_MAX_DAMAGE);
+    
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Constants;
+using static GameInfo;
 public class Movement : MonoBehaviour
 {
     public KeyCode Clockwise;

@@ -92,8 +92,8 @@ GameObject:
   - component: {fileID: 1669882827559969802}
   - component: {fileID: 3568198183190926749}
   - component: {fileID: 8454521446027575607}
-  - component: {fileID: 1470632081757309923}
   - component: {fileID: 2717066720911212653}
+  - component: {fileID: 7956307488537345765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -257,7 +257,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.00000007164738, y: -1.480158}
+  m_ConnectedAnchor: {x: 0, y: -1.4801587}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!114 &1669882827559969802
@@ -272,8 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0fd911c85af4149a8ff21f3e965052, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left: 0
-  Right: 0
+  Clockwise: 0
+  CounterClockwise: 0
 --- !u!114 &3568198183190926749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,22 +300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthSlider: {fileID: 6697594619356457417}
---- !u!114 &1470632081757309923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669882827559969807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5912f095853f4347966d8cf130ac97a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Barrel: {fileID: 8600053631460387567}
-  Head: {fileID: 3128601843188225453}
-  ClockwiseKey: 0
-  CounterClockwiseKey: 0
 --- !u!114 &2717066720911212653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +317,22 @@ MonoBehaviour:
   FirePoint: {fileID: 6246608675629043999}
   ShootKey: 0
   PowerSlider: {fileID: 6026773334035156566}
+--- !u!114 &7956307488537345765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669882827559969807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5912f095853f4347966d8cf130ac97a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Barrel: {fileID: 8600053631460387567}
+  Head: {fileID: 3128601843188225453}
+  ClockwiseKey: 0
+  CounterClockwiseKey: 0
 --- !u!1 &1981765765567994910
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0.00000038935698, y: -1.0477175}
+  m_ConnectedAnchor: {x: 0, y: -1.047717}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!1 &4062732158200082899

@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static Constants;
-public class Aim : MonoBehaviour
+using static GameInfo;
+public class Aiming : MonoBehaviour
 {
     public GameObject Barrel;
     public GameObject Head;
@@ -31,6 +31,5 @@ public class Aim : MonoBehaviour
             Barrel.transform.RotateAround(Head.transform.position, Vector3.forward, BARREL_ANGLE_DELTA);
             currentAngle += BARREL_ANGLE_DELTA;
         }
-
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static Constants;
+using static GameInfo;
 public class Health : MonoBehaviour
 {
     public GameObject HealthSlider;
@@ -12,22 +12,15 @@ public class Health : MonoBehaviour
         health = MAX_HEALTH;
         UpdateDisplay();
     }
-
+    // called by other objects that want to deal damage to this one
     public void TakeDamage(float amount)
     {
         health -= amount;
-        if (health < 0) { EndGame(); }
-        Debug.Log(health);
+        if (health < 0) EndGame();
         UpdateDisplay();
     }
-    void EndGame()
-    {
-        // UnityEngine.SceneManagement.SceneManager.LoadScene()
-        Time.timeScale = 0;
-        //co dál? tlačítko zpět na úvod zobrazit kdo vyhrál
-    }
-    void UpdateDisplay()
-    {
+    void EndGame() =>
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
+    void UpdateDisplay() =>
         HealthSlider.GetComponent<Slider>().value = health / MAX_HEALTH;
-    }
 }
