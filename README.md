@@ -80,7 +80,7 @@ Vyrábí _Meteory_ v náhodných místech s frekvencí závislou na hracím čas
 Triviální.
 
 ## Závěr
-Tvorbu jsem si užil a myslím, že jsem lépe připraven účastnit se v budoucnu nějakého Game Jamu. balanc fyzikálních konstant, aby byla hra zábavná. Někdy jsem váhal v rozhodnoutích o úrovni abstrakce, aby kód byl znovuvyužitelný, ale zároveň čitelný. Tvorba dokumentace byla obtížnější, než u pouze kódového projektu, protože jsem musel zvažovat, jak spolu objekty souvisí ve scéně, kterou jsem dělal graficky.
+Tvorbu jsem si užil a myslím, že jsem lépe připraven účastnit se v budoucnu nějakého Game Jamu. Balanc fyzikálních konstant, aby byla hra zábavná by jistě šel dále optimalizovat. Někdy jsem váhal v rozhodnoutích o úrovni abstrakce, aby kód byl znovuvyužitelný, ale zároveň čitelný.
 #### Co by šlo udělat dál
 Možnost změny ovládání.
 Více herních map/scén.
