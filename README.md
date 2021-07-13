@@ -6,10 +6,10 @@
 
 ## Zadání a úvod
 Je to hra pro dva hráče v enginu Unity. Účelem hry je zábava. Nápad vznikl vzpomínáním na flashové hry, které jsem hrál v letech základní školy na internetu se sestrou. Nejužší inspirací jsou [Tanks od 2dplay.com](https://archive.org/details/tanks_flashgame), později mi došlo, že je hra podobná také [Worms](https://cs.wikipedia.org/wiki/Worms_(hern%C3%AD_s%C3%A9rie)). Hlavní "ozvláštňující myšlenka" je souboj na kruhové planetě s gravitací. 
-Velkou výhodou i nevýhodou Unity je, že spousta práce se děje v hezkém GUI, tím pádem není nutné psát tolik kódu, ale zato se lze snáze ztratit v bezedných klikátkách.
+Velkou výhodou i nevýhodou Unity je, že spousta práce se děje v hezkém GUI, tím pádem není nutné psát tolik kódu, ale zato se lze snáze ztratit ve vztazích mezi objekty.
 
 ## Uživatelský návod
-Build je díky Unity možný pro vše co má QWERT(YZ) klávesnici (Windows, Linux, Mac, WebGL). Přikládám .exe
+Build je díky Unity možný pro vše co má QWERT(YZ) klávesnici (Windows, Linux, Mac, WebGL). Přikládám [odkaz na WebGL](https://simmer.io/@JanPro/gravitank).
 
 
 Ovládání je vysvětleno v úvodní scéně. Konkrétní mechaniky se nejlépe pochopí hraním. Cíl hry je snížit životy nepřítele na nulu. Střela ubírá životy úměrně síle výstřelu a času letu (aby se hráči snažili dělat co největší oblouky). Náraz dvou střel do sebe je obě zničí. Občas létají meteory, aby se hráči nemohli sousředit jen na míření, ale museli někdy i uhýbat. 
