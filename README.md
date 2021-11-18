@@ -1,3 +1,19 @@
+# GraviTank (EN)
+- Programming 2 course project
+- July 2021
+- Unity engine used: Unity 2020.3.13f1
+
+## Overview
+Game for 2 players in Unity. Available at [GraviTank](https://simmer.io/@JanPro/gravitank) I thought how to replicate fun flash games from my childhood, influences include: [Tanks by 2dplay.com](https://archive.org/details/tanks_flashgame), [Worms](https://en.wikipedia.org/wiki/Worms_(series))).
+The distinctive feature is fighting on a round planet with gravity.
+
+
+
+## Platform
+Can be built with Unity for any platform.
+
+
+
 # GraviTank (CZ)
 - Zápočtový program 
 - NPRG031 Programování 2
@@ -81,6 +97,7 @@ Triviální.
 
 ## Závěr
 Tvorbu jsem si užil a myslím, že jsem lépe připraven účastnit se v budoucnu nějakého Game Jamu. Balanc fyzikálních konstant, aby byla hra zábavná by jistě šel dále optimalizovat. Někdy jsem váhal v rozhodnoutích o úrovni abstrakce, aby kód byl znovuvyužitelný, ale zároveň čitelný.
+
 #### Co by šlo udělat dál
 Možnost změny ovládání.
 Více herních map/scén.
